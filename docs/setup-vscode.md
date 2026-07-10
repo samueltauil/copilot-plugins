@@ -21,6 +21,8 @@ Add this marketplace to VS Code by configuring the [`chat.plugins.marketplaces`]
 1. Open [`chat.plugins.marketplaces`](vscode://settings/chat.plugins.marketplaces) directly (click the link from VS Code), or open **Settings** (`Ctrl+,` / `⌘,`) and search for it.
 2. Add `samueltauil/copilot-plugins` to the list.
 
+![VS Code Settings UI showing chat.plugins.marketplaces with samueltauil/copilot-plugins added](images/vscode-marketplace-settings.png)
+
 ### Option 2: settings.json
 
 Add directly to your VS Code `settings.json`:
@@ -55,8 +57,14 @@ To recommend this marketplace for a specific project, add to `.github/copilot/se
 ## Browse and install plugins
 
 1. Open the **Extensions** view (`Ctrl+Shift+X` / `⇧⌘X`).
-2. Type `@agentPlugins` in the search field to see available plugins from your configured marketplaces.
-3. Select **Install** on any plugin you want.
+2. Click the **More Actions** menu (three dots) → **Views** → **Agent Plugins** to open the plugins view.
+
+   ![Extensions sidebar showing Views menu with Agent Plugins option](images/vscode-agent-plugins-view.png)
+
+3. Type `@agentPlugins` in the search field to see available plugins from your configured marketplaces.
+4. Select **Install** on any plugin you want.
+
+   ![Agent Plugins view showing all 12 plugins from the copilot-plugins marketplace](images/vscode-browse-plugins.png)
 
 Alternatively, you can install a plugin directly from source:
 
