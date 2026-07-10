@@ -27,10 +27,12 @@ Or in an interactive session:
 
 ### VS Code
 
-1. Enable plugins: set `chat.plugins.enabled` to `true` in VS Code settings
-2. Open the command palette and run **Copilot: Add Plugin Marketplace**
-3. Enter `samueltauil/copilot-plugins`
-4. Browse and install plugins from the marketplace panel
+1. Ensure `chat.plugins.enabled` is enabled by your org admin
+2. Add this marketplace to the `chat.plugins.marketplaces` setting in VS Code:
+   ```json
+   "chat.plugins.marketplaces": ["samueltauil/copilot-plugins"]
+   ```
+3. Open the Extensions view, search `@agentPlugins`, and install plugins
 
 ### Copilot cloud agent
 
