@@ -10,17 +10,16 @@
 
 ## Enable plugin support
 
-Plugin support in VS Code requires the `chat.plugins.enabled` setting, which is managed at the organization level. If you don't see plugin options, contact your Copilot admin to enable it.
+Plugin support in VS Code requires the [`chat.plugins.enabled`](vscode://settings/chat.plugins.enabled) setting, which is managed at the organization level. If you don't see plugin options, contact your Copilot admin to enable it.
 
 ## Add the marketplace
 
-Add this marketplace to VS Code by configuring the `chat.plugins.marketplaces` setting.
+Add this marketplace to VS Code by configuring the [`chat.plugins.marketplaces`](vscode://settings/chat.plugins.marketplaces) setting.
 
 ### Option 1: VS Code settings UI
 
-1. Open **Settings** (`Ctrl+,` / `⌘,`).
-2. Search for `chat.plugins.marketplaces`.
-3. Add `samueltauil/copilot-plugins` to the list.
+1. Open [`chat.plugins.marketplaces`](vscode://settings/chat.plugins.marketplaces) directly (click the link from VS Code), or open **Settings** (`Ctrl+,` / `⌘,`) and search for it.
+2. Add `samueltauil/copilot-plugins` to the list.
 
 ### Option 2: settings.json
 
@@ -80,7 +79,7 @@ The plugin will appear in the **Agent Plugins - Installed** view in VS Code with
 - View installed plugins: **Extensions** view → **Agent Plugins - Installed** section
 - Enable/disable per workspace: right-click a plugin → **Enable/Disable for Workspace**
 - Uninstall: right-click a plugin → **Uninstall**
-- Update: run **Extensions: Check for Extension Updates** from the Command Palette, or enable `extensions.autoUpdate` for automatic checks every 24 hours
+- Update: run **Extensions: Check for Extension Updates** from the Command Palette, or enable [`extensions.autoUpdate`](vscode://settings/extensions.autoUpdate) for automatic checks every 24 hours
 
 ## Verify
 
