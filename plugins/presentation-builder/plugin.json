@@ -1,0 +1,8 @@
+{
+  "name": "presentation-builder",
+  "description": "Build Reveal.js presentations with Copilot. Skills for slide authoring conventions and generating complete presentations from requirements.",
+  "version": "1.0.0",
+  "author": { "name": "Samuel Tauil" },
+  "license": "MIT",
+  "keywords": ["revealjs", "presentation", "slides", "html"]
+}

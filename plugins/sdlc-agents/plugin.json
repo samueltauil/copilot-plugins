@@ -1,0 +1,17 @@
+{
+  "name": "sdlc-agents",
+  "description": "Multi-agent SDLC workflow with orchestrator, planner, architect, developer, and tester agents that hand off work through the full software development lifecycle.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Samuel Tauil"
+  },
+  "license": "MIT",
+  "keywords": [
+    "sdlc",
+    "agents",
+    "workflow",
+    "planning",
+    "architecture",
+    "testing"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "mcp-development",
+  "description": "Build Copilot extensions, MCP servers, and agentic workflows. Includes the agentic-workflows agent and Copilot SDK skill.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Samuel Tauil"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "copilot-sdk",
+    "extensions",
+    "agentic",
+    "ai-agents"
+  ]
+}

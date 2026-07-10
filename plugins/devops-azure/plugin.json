@@ -1,0 +1,17 @@
+{
+  "name": "devops-azure",
+  "description": "Azure DevOps and CI/CD skills \u2014 Azure Static Web Apps deployment, Azure DevOps CLI, App Insights instrumentation, Bicep deployment preflight validation, and Terraform AzureRM diff analysis.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Samuel Tauil"
+  },
+  "license": "MIT",
+  "keywords": [
+    "azure",
+    "devops",
+    "cicd",
+    "bicep",
+    "terraform",
+    "app-insights"
+  ]
+}

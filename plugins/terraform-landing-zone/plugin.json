@@ -1,0 +1,8 @@
+{
+  "name": "terraform-landing-zone",
+  "description": "Azure landing zone guardrails for Terraform. Skills for enforcing naming conventions, policy compliance, drift remediation, and brownfield resource import.",
+  "version": "1.0.0",
+  "author": { "name": "Samuel Tauil" },
+  "license": "MIT",
+  "keywords": ["terraform", "azure", "landing-zone", "infrastructure", "iac"]
+}

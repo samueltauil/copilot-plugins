@@ -1,0 +1,8 @@
+{
+  "name": "databricks-dev",
+  "description": "Databricks development expert agent with deep knowledge of the Databricks platform, VS Code integration, SQLTools, and best practices for notebooks, jobs, and Delta Lake.",
+  "version": "1.0.0",
+  "author": { "name": "Samuel Tauil" },
+  "license": "MIT",
+  "keywords": ["databricks", "spark", "delta-lake", "notebooks"]
+}

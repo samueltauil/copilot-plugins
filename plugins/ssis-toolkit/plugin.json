@@ -1,0 +1,16 @@
+{
+  "name": "ssis-toolkit",
+  "description": "SSIS package authoring and validation toolkit. Agents for authoring packages via metadata JSON (never hand-editing .dtsx) and a delivery-gate validator, plus skills for SQL conventions, SSISDB deployment, and metadata schemas.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Samuel Tauil"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ssis",
+    "sql-server",
+    "etl",
+    "data-integration",
+    "dtsx"
+  ]
+}

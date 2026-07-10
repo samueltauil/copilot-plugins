@@ -1,0 +1,17 @@
+{
+  "name": "frontend-ui",
+  "description": "Frontend and UI development skills for React, Vue, component design patterns, accessibility, and responsive design.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Samuel Tauil"
+  },
+  "license": "MIT",
+  "keywords": [
+    "frontend",
+    "react",
+    "vue",
+    "ui",
+    "components",
+    "design"
+  ]
+}

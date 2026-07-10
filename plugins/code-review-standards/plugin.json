@@ -1,0 +1,16 @@
+{
+  "name": "code-review-standards",
+  "description": "Code review agents and standards for PR reviews, BigQuery SQL conventions, and data pipeline quality. Includes DevOps, QA, data analyst, and BPMN specialist agents.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Samuel Tauil"
+  },
+  "license": "MIT",
+  "keywords": [
+    "code-review",
+    "standards",
+    "bigquery",
+    "sql",
+    "qa"
+  ]
+}

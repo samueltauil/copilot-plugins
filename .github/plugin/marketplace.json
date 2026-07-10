@@ -1,0 +1,169 @@
+{
+  "name": "copilot-plugins",
+  "metadata": {
+    "description": "A curated marketplace of GitHub Copilot plugins aggregated from real-world customizations — agents, skills, and extensions packaged for team standardization and org-wide sharing.",
+    "version": "1.0.0"
+  },
+  "owner": {
+    "name": "Samuel Tauil",
+    "email": "samueltauil@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "jekyll-blog-writer",
+      "source": "./plugins/jekyll-blog-writer",
+      "description": "Story-first technical blog writer with Jekyll conventions and AI humanizer. Includes a blog writer agent, Jekyll specialist skill, and humanizer skill that work together to produce publish-ready posts.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Samuel Tauil"
+      },
+      "license": "MIT",
+      "keywords": ["jekyll", "blog", "writing", "humanizer", "technical-writing"],
+      "category": "documentation",
+      "tags": ["blog", "jekyll", "github-pages", "content-creation"]
+    },
+    {
+      "name": "sdlc-agents",
+      "source": "./plugins/sdlc-agents",
+      "description": "Multi-agent SDLC workflow with orchestrator, planner, architect, developer, and tester agents that hand off work through the full software development lifecycle.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Samuel Tauil"
+      },
+      "license": "MIT",
+      "keywords": ["sdlc", "agents", "workflow", "planning", "architecture", "testing"],
+      "category": "development",
+      "tags": ["multi-agent", "orchestration", "handoffs", "agile"]
+    },
+    {
+      "name": "code-review-standards",
+      "source": "./plugins/code-review-standards",
+      "description": "Code review agents and standards for PR reviews, BigQuery SQL conventions, and data pipeline quality. Includes DevOps, QA, data analyst, and BPMN specialist agents.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Samuel Tauil"
+      },
+      "license": "MIT",
+      "keywords": ["code-review", "standards", "bigquery", "sql", "qa"],
+      "category": "code-quality",
+      "tags": ["review", "standards", "data-quality", "bpmn"]
+    },
+    {
+      "name": "terraform-landing-zone",
+      "source": "./plugins/terraform-landing-zone",
+      "description": "Azure landing zone guardrails for Terraform. Skills for enforcing naming conventions, policy compliance, drift remediation, and brownfield resource import.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Samuel Tauil"
+      },
+      "license": "MIT",
+      "keywords": ["terraform", "azure", "landing-zone", "infrastructure", "iac"],
+      "category": "devops",
+      "tags": ["terraform", "azure", "compliance", "drift-detection"]
+    },
+    {
+      "name": "ssis-toolkit",
+      "source": "./plugins/ssis-toolkit",
+      "description": "SSIS package authoring and validation toolkit. Agents for authoring packages via metadata JSON (never hand-editing .dtsx) and a delivery-gate validator, plus skills for SQL conventions, SSISDB deployment, and metadata schemas.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Samuel Tauil"
+      },
+      "license": "MIT",
+      "keywords": ["ssis", "sql-server", "etl", "data-integration", "dtsx"],
+      "category": "data",
+      "tags": ["ssis", "sql-server", "etl", "enterprise"]
+    },
+    {
+      "name": "presentation-builder",
+      "source": "./plugins/presentation-builder",
+      "description": "Build Reveal.js presentations with Copilot. Skills for slide authoring conventions and generating complete presentations from requirements.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Samuel Tauil"
+      },
+      "license": "MIT",
+      "keywords": ["revealjs", "presentation", "slides", "html"],
+      "category": "documentation",
+      "tags": ["presentation", "slides", "reveal-js"]
+    },
+    {
+      "name": "databricks-dev",
+      "source": "./plugins/databricks-dev",
+      "description": "Databricks development expert agent with deep knowledge of the Databricks platform, VS Code integration, SQLTools, and best practices for notebooks, jobs, and Delta Lake.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Samuel Tauil"
+      },
+      "license": "MIT",
+      "keywords": ["databricks", "spark", "delta-lake", "notebooks"],
+      "category": "data",
+      "tags": ["databricks", "data-engineering", "spark"]
+    },
+    {
+      "name": "git-workflow",
+      "source": "./plugins/git-workflow",
+      "description": "Git workflow standardization skills — consistent commit messages, GitHub CLI operations, issue management, and contribution guidelines.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Samuel Tauil"
+      },
+      "license": "MIT",
+      "keywords": ["git", "github", "commits", "workflow", "cli"],
+      "category": "git-version-control",
+      "tags": ["git", "github-cli", "commits", "issues"]
+    },
+    {
+      "name": "testing-toolkit",
+      "source": "./plugins/testing-toolkit",
+      "description": "Testing skills for web application testing strategies, Playwright automation, Chrome DevTools browser automation, AI agent evaluation, and exploratory testing.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Samuel Tauil"
+      },
+      "license": "MIT",
+      "keywords": ["testing", "playwright", "devtools", "qa", "automation"],
+      "category": "testing",
+      "tags": ["testing", "e2e", "playwright", "browser-automation"]
+    },
+    {
+      "name": "devops-azure",
+      "source": "./plugins/devops-azure",
+      "description": "Azure DevOps and CI/CD skills — Azure Static Web Apps deployment, Azure DevOps CLI, App Insights instrumentation, Bicep deployment preflight validation, and Terraform AzureRM diff analysis.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Samuel Tauil"
+      },
+      "license": "MIT",
+      "keywords": ["azure", "devops", "cicd", "bicep", "terraform", "app-insights"],
+      "category": "devops",
+      "tags": ["azure", "ci-cd", "deployment", "monitoring"]
+    },
+    {
+      "name": "mcp-development",
+      "source": "./plugins/mcp-development",
+      "description": "Build Copilot extensions, MCP servers, and agentic workflows. Includes the agentic-workflows agent for creating AI-powered workflows and the Copilot SDK skill.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Samuel Tauil"
+      },
+      "license": "MIT",
+      "keywords": ["mcp", "copilot-sdk", "extensions", "agentic", "ai-agents"],
+      "category": "mcp-development",
+      "tags": ["mcp", "extensions", "agentic-workflows", "sdk"]
+    },
+    {
+      "name": "frontend-ui",
+      "source": "./plugins/frontend-ui",
+      "description": "Frontend and UI development skills for React, Vue, component design patterns, accessibility, and responsive design.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Samuel Tauil"
+      },
+      "license": "MIT",
+      "keywords": ["frontend", "react", "vue", "ui", "components", "design"],
+      "category": "frontend",
+      "tags": ["frontend", "react", "vue", "ui-components"]
+    }
+  ]
+}

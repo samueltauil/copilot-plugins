@@ -1,0 +1,16 @@
+{
+  "name": "testing-toolkit",
+  "description": "Testing skills for web application testing strategies, Playwright automation, Chrome DevTools browser automation, AI agent evaluation, and exploratory testing.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Samuel Tauil"
+  },
+  "license": "MIT",
+  "keywords": [
+    "testing",
+    "playwright",
+    "devtools",
+    "qa",
+    "automation"
+  ]
+}

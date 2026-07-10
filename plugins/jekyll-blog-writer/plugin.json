@@ -1,0 +1,16 @@
+{
+  "name": "jekyll-blog-writer",
+  "description": "Story-first technical blog writer with Jekyll conventions and AI humanizer. Includes a blog writer agent, Jekyll specialist skill, and humanizer skill that work together to produce publish-ready posts.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Samuel Tauil"
+  },
+  "license": "MIT",
+  "keywords": [
+    "jekyll",
+    "blog",
+    "writing",
+    "humanizer",
+    "technical-writing"
+  ]
+}
