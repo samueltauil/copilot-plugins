@@ -10,19 +10,6 @@
   },
   "plugins": [
     {
-      "name": "jekyll-blog-writer",
-      "source": "./plugins/jekyll-blog-writer",
-      "description": "Story-first technical blog writer with Jekyll conventions and AI humanizer. Includes a blog writer agent, Jekyll specialist skill, and humanizer skill that work together to produce publish-ready posts.",
-      "version": "1.0.0",
-      "author": {
-        "name": "Samuel Tauil"
-      },
-      "license": "MIT",
-      "keywords": ["jekyll", "blog", "writing", "humanizer", "technical-writing"],
-      "category": "documentation",
-      "tags": ["blog", "jekyll", "github-pages", "content-creation"]
-    },
-    {
       "name": "sdlc-agents",
       "source": "./plugins/sdlc-agents",
       "description": "Multi-agent SDLC workflow with orchestrator, planner, architect, developer, and tester agents that hand off work through the full software development lifecycle.",

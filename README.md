@@ -83,7 +83,6 @@ This automatically installs the specified plugins for every user on the enterpri
 
 | Plugin | Description | Contains |
 |--------|-------------|----------|
-| [**jekyll-blog-writer**](plugins/jekyll-blog-writer/) | Story-first technical blog writer with Jekyll conventions and AI humanizer | 1 agent, 2 skills |
 | [**sdlc-agents**](plugins/sdlc-agents/) | Multi-agent SDLC workflow: orchestrator → planner → architect → developer → tester | 5 agents, 1 skill |
 | [**code-review-standards**](plugins/code-review-standards/) | Code review agents and standards for PRs, BigQuery SQL, and data pipelines | 6 agents, 2 skills |
 | [**terraform-landing-zone**](plugins/terraform-landing-zone/) | Azure landing zone guardrails for Terraform with drift remediation | 3 skills |
