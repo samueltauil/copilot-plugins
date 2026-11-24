@@ -11,19 +11,22 @@ A curated marketplace of GitHub Copilot plugins aggregated from real-world custo
 copilot plugin marketplace add samueltauil/copilot-plugins
 
 # Browse available plugins
-copilot plugin marketplace browse copilot-plugins
+copilot plugin marketplace browse custom-copilot-plugins
 
 # Install a plugin
-copilot plugin install sdlc-agents@copilot-plugins
+copilot plugin install sdlc-agents@custom-copilot-plugins
 ```
 
 Or in an interactive session:
 
 ```
 /plugin marketplace add samueltauil/copilot-plugins
-/plugin marketplace browse copilot-plugins
-/plugin install sdlc-agents@copilot-plugins
+/plugin marketplace browse custom-copilot-plugins
+/plugin install sdlc-agents@custom-copilot-plugins
 ```
+
+> [!NOTE]
+> The repository is `samueltauil/copilot-plugins`, but the marketplace registers as **`custom-copilot-plugins`**, so plugins install as `PLUGIN-NAME@custom-copilot-plugins`. The name is different on purpose: GitHub's own marketplace, [`github/copilot-plugins`](https://github.com/github/copilot-plugins), already uses the name `copilot-plugins` on most machines. See [troubleshooting](docs/setup-cli.md#troubleshooting) if you registered this marketplace under its old name.
 
 ### VS Code
 
@@ -41,7 +44,7 @@ Add to your repository's `.github/copilot/settings.json`:
 ```json
 {
   "extraKnownMarketplaces": {
-    "copilot-plugins": {
+    "custom-copilot-plugins": {
       "source": {
         "source": "github",
         "repo": "samueltauil/copilot-plugins"
@@ -49,8 +52,8 @@ Add to your repository's `.github/copilot/settings.json`:
     }
   },
   "enabledPlugins": {
-    "sdlc-agents@copilot-plugins": true,
-    "code-review-standards@copilot-plugins": true
+    "sdlc-agents@custom-copilot-plugins": true,
+    "code-review-standards@custom-copilot-plugins": true
   }
 }
 ```
@@ -62,7 +65,7 @@ In your enterprise's `.github-private` repository, create `copilot/managed-setti
 ```json
 {
   "extraKnownMarketplaces": {
-    "copilot-plugins": {
+    "custom-copilot-plugins": {
       "source": {
         "source": "github",
         "repo": "samueltauil/copilot-plugins"
@@ -70,9 +73,9 @@ In your enterprise's `.github-private` repository, create `copilot/managed-setti
     }
   },
   "enabledPlugins": {
-    "code-review-standards@copilot-plugins": true,
-    "git-workflow@copilot-plugins": true,
-    "testing-toolkit@copilot-plugins": true
+    "code-review-standards@custom-copilot-plugins": true,
+    "git-workflow@custom-copilot-plugins": true,
+    "testing-toolkit@custom-copilot-plugins": true
   }
 }
 ```

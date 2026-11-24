@@ -1,8 +1,8 @@
 {
-  "name": "copilot-plugins",
+  "name": "custom-copilot-plugins",
   "metadata": {
     "description": "A curated marketplace of GitHub Copilot plugins aggregated from real-world customizations — agents, skills, and extensions packaged for team standardization and org-wide sharing.",
-    "version": "1.0.0"
+    "version": "2.0.0"
   },
   "owner": {
     "name": "Samuel Tauil",
