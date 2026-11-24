@@ -32,7 +32,7 @@ Create `copilot/managed-settings.json` with:
 ```json
 {
   "extraKnownMarketplaces": {
-    "copilot-plugins": {
+    "custom-copilot-plugins": {
       "source": {
         "source": "github",
         "repo": "samueltauil/copilot-plugins"
@@ -40,14 +40,14 @@ Create `copilot/managed-settings.json` with:
     }
   },
   "enabledPlugins": {
-    "code-review-standards@copilot-plugins": true,
-    "git-workflow@copilot-plugins": true,
-    "testing-toolkit@copilot-plugins": true
+    "code-review-standards@custom-copilot-plugins": true,
+    "git-workflow@custom-copilot-plugins": true,
+    "testing-toolkit@custom-copilot-plugins": true
   }
 }
 ```
 
-This makes the `copilot-plugins` marketplace known to managed clients and automatically installs the listed plugins.
+This makes the `custom-copilot-plugins` marketplace known to managed clients and automatically installs the listed plugins.
 
 ## What this applies to
 
@@ -67,7 +67,7 @@ Example:
 ```json
 {
   "extraKnownMarketplaces": {
-    "copilot-plugins": {
+    "custom-copilot-plugins": {
       "source": {
         "source": "github",
         "repo": "samueltauil/copilot-plugins"
@@ -81,9 +81,9 @@ Example:
     }
   ],
   "enabledPlugins": {
-    "code-review-standards@copilot-plugins": true,
-    "git-workflow@copilot-plugins": true,
-    "testing-toolkit@copilot-plugins": true
+    "code-review-standards@custom-copilot-plugins": true,
+    "git-workflow@custom-copilot-plugins": true,
+    "testing-toolkit@custom-copilot-plugins": true
   }
 }
 ```
@@ -135,7 +135,7 @@ For maximum control, combine bypass mode restrictions with strict marketplace co
     "disableBypassPermissionsMode": "disable"
   },
   "extraKnownMarketplaces": {
-    "copilot-plugins": {
+    "custom-copilot-plugins": {
       "source": {
         "source": "github",
         "repo": "samueltauil/copilot-plugins"
@@ -149,8 +149,8 @@ For maximum control, combine bypass mode restrictions with strict marketplace co
     }
   ],
   "enabledPlugins": {
-    "code-review-standards@copilot-plugins": true,
-    "git-workflow@copilot-plugins": true
+    "code-review-standards@custom-copilot-plugins": true,
+    "git-workflow@custom-copilot-plugins": true
   }
 }
 ```

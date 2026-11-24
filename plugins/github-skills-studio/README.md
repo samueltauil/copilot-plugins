@@ -36,7 +36,7 @@ finished exercise like a real learner using Computer Use.
 
 ```bash
 copilot plugin marketplace add samueltauil/copilot-plugins
-copilot plugin install github-skills-studio@copilot-plugins
+copilot plugin install github-skills-studio@custom-copilot-plugins
 ```
 
 In VS Code, add the marketplace to `chat.plugins.marketplaces` and install **github-skills-studio** from the

@@ -11,7 +11,7 @@ Add this file to your repository at `.github/copilot/settings.json`:
 ```json
 {
   "extraKnownMarketplaces": {
-    "copilot-plugins": {
+    "custom-copilot-plugins": {
       "source": {
         "source": "github",
         "repo": "samueltauil/copilot-plugins"
@@ -19,7 +19,7 @@ Add this file to your repository at `.github/copilot/settings.json`:
     }
   },
   "enabledPlugins": {
-    "PLUGIN-NAME@copilot-plugins": true
+    "PLUGIN-NAME@custom-copilot-plugins": true
   }
 }
 ```
@@ -35,7 +35,7 @@ Add this file to your repository at `.github/copilot/settings.json`:
 ```json
 {
   "extraKnownMarketplaces": {
-    "copilot-plugins": {
+    "custom-copilot-plugins": {
       "source": {
         "source": "github",
         "repo": "samueltauil/copilot-plugins"
@@ -43,8 +43,8 @@ Add this file to your repository at `.github/copilot/settings.json`:
     }
   },
   "enabledPlugins": {
-    "sdlc-agents@copilot-plugins": true,
-    "code-review-standards@copilot-plugins": true
+    "sdlc-agents@custom-copilot-plugins": true,
+    "code-review-standards@custom-copilot-plugins": true
   }
 }
 ```

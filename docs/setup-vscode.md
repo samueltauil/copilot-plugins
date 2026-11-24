@@ -42,7 +42,7 @@ To recommend this marketplace for a specific project, add to `.github/copilot/se
 ```json
 {
   "extraKnownMarketplaces": {
-    "copilot-plugins": {
+    "custom-copilot-plugins": {
       "source": {
         "source": "github",
         "repo": "samueltauil/copilot-plugins"
@@ -52,7 +52,7 @@ To recommend this marketplace for a specific project, add to `.github/copilot/se
 }
 ```
 
-> **Note:** VS Code ships with [copilot-plugins](https://github.com/github/copilot-plugins) and [awesome-copilot](https://github.com/github/awesome-copilot) as default marketplaces. The setting above adds this marketplace alongside those defaults.
+> **Note:** VS Code ships with [copilot-plugins](https://github.com/github/copilot-plugins) and [awesome-copilot](https://github.com/github/awesome-copilot) as default marketplaces. The setting above adds this marketplace alongside those defaults. This marketplace is named `custom-copilot-plugins`, so it doesn't clash with GitHub's `copilot-plugins`.
 
 ## Browse and install plugins
 
@@ -64,7 +64,7 @@ To recommend this marketplace for a specific project, add to `.github/copilot/se
 3. Type `@agentPlugins` in the search field to see available plugins from your configured marketplaces.
 4. Select **Install** on any plugin you want.
 
-   ![Agent Plugins view showing all 12 plugins from the copilot-plugins marketplace](images/vscode-browse-plugins.png)
+   ![Agent Plugins view showing all 12 plugins from this marketplace](images/vscode-browse-plugins.png)
 
 Alternatively, you can install a plugin directly from source:
 
@@ -77,7 +77,7 @@ Alternatively, you can install a plugin directly from source:
 Plugins installed via the Copilot CLI are automatically discovered by VS Code. If you've already run:
 
 ```bash
-copilot plugin install sdlc-agents@copilot-plugins
+copilot plugin install sdlc-agents@custom-copilot-plugins
 ```
 
 The plugin will appear in the **Agent Plugins - Installed** view in VS Code without any additional setup.
