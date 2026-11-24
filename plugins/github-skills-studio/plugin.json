@@ -1,0 +1,19 @@
+{
+  "name": "github-skills-studio",
+  "description": "Create GitHub Skills exercises and workshops end to end with learning science built in: learner analysis, outlines, exercise-toolkit scaffolding, step writing, Actions triggers and grading, independent review with a static validator, automated learner walkthroughs with Computer Use, and safe publishing.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Samuel Tauil"
+  },
+  "license": "MIT",
+  "keywords": [
+    "github-skills",
+    "exercises",
+    "workshops",
+    "learning-design",
+    "instructional-design",
+    "github-actions",
+    "computer-use",
+    "usability-testing"
+  ]
+}

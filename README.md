@@ -94,6 +94,7 @@ This automatically installs the specified plugins for every user on the enterpri
 | [**devops-azure**](plugins/devops-azure/) | Azure DevOps, CI/CD, App Insights, Bicep preflight, Terraform diffs | 5+ skills |
 | [**mcp-development**](plugins/mcp-development/) | Build Copilot extensions, MCP servers, and agentic workflows | 1 agent, 2+ skills |
 | [**frontend-ui**](plugins/frontend-ui/) | Frontend and UI patterns for React, Vue, components, and design systems | 5+ skills |
+| [**github-skills-studio**](plugins/github-skills-studio/) | Create GitHub Skills exercises and workshops with learning science, independent review, and Computer Use walkthrough tests | 3 agents, 10 skills |
 
 ## What plugins can and cannot distribute
 

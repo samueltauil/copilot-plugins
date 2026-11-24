@@ -1,0 +1,172 @@
+name: Step <STEP>
+
+on:
+  # Manual re-run for facilitators and testing.
+  workflow_dispatch:
+  # (replace-me: the event produced by this step's final learner action. See
+  # exercise-automation/references/triggers.md. Never use push to main without a
+  # paths filter, and never filter on a path that already exists in the template.)
+  push:
+    branches:
+      - "(replace-me: branch the learner pushes to)"
+    paths:
+      - "(replace-me: file the learner creates or edits)"
+
+# Least privilege: no default permissions; each job asks only for what it uses.
+permissions: {}
+
+# A quick second push cancels the run it supersedes instead of grading twice.
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
+
+env:
+  STEP_<NEXT_STEP>_FILE: ".github/steps/<NEXT_STEP>-step.md"
+
+jobs:
+  find_exercise:
+    name: Find Exercise Issue
+    permissions:
+      issues: read # locate the exercise issue
+    uses: skills/exercise-toolkit/.github/workflows/find-exercise-issue.yml@v0.9.3
+
+  check_step_work:
+    name: Check step work
+    runs-on: ubuntu-latest
+    needs: [find_exercise]
+    permissions:
+      contents: read # read the learner's files
+      issues: write # update Mona's feedback comment
+      # No actions: write. A learner-triggered job must not enable or disable workflows.
+    env:
+      ISSUE_REPOSITORY: ${{ github.repository }}
+      ISSUE_NUMBER: ${{ needs.find_exercise.outputs.issue-number }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Get response templates
+        uses: actions/checkout@v6
+        with:
+          repository: skills/exercise-toolkit
+          path: exercise-toolkit
+          ref: v0.9.3
+
+      - name: Find last comment
+        id: find-last-comment
+        uses: peter-evans/find-comment@v4
+        with:
+          repository: ${{ env.ISSUE_REPOSITORY }}
+          issue-number: ${{ env.ISSUE_NUMBER }}
+          comment-author: github-actions[bot] # never target the learner's own comment
+          direction: last
+
+      - name: Update comment - checking work
+        uses: GrantBirki/comment@v2.1.1
+        with:
+          repository: ${{ env.ISSUE_REPOSITORY }}
+          issue-number: ${{ env.ISSUE_NUMBER }}
+          comment-id: ${{ steps.find-last-comment.outputs.comment-id }}
+          file: exercise-toolkit/markdown-templates/step-feedback/checking-work.md
+          edit-mode: replace
+
+      # START: Check practical exercise
+      # One independent check per learning objective. Every check keeps
+      # continue-on-error: true and a stable id that appears in results_table.
+
+      - name: "Check (replace-me: what check 1 verifies)"
+        id: check-1
+        continue-on-error: true
+        uses: skills/exercise-toolkit/actions/file-exists@v0.9.3
+        with:
+          file: "(replace-me: path/to/expected/file)"
+
+      - name: "Check (replace-me: what check 2 verifies)"
+        id: check-2
+        continue-on-error: true
+        uses: skills/action-keyphrase-checker@v2
+        with:
+          text-file: "(replace-me: path/to/expected/file)"
+          keyphrase: "(replace-me: phrase that proves the concept was applied)"
+          case-sensitive: false
+
+      - name: Update comment - step results
+        uses: GrantBirki/comment@v2.1.1
+        with:
+          repository: ${{ env.ISSUE_REPOSITORY }}
+          issue-number: ${{ env.ISSUE_NUMBER }}
+          comment-id: ${{ steps.find-last-comment.outputs.comment-id }}
+          edit-mode: replace
+          file: exercise-toolkit/markdown-templates/step-feedback/step-results-table.md
+          # Tips render only when a check failed. Keep tip text free of single quotes.
+          vars: |
+            step_number: <STEP>
+            results_table:
+              - description: "(replace-me: learner-readable expectation for check 1)"
+                passed: ${{ steps.check-1.outcome == 'success' }}
+              - description: "(replace-me: learner-readable expectation for check 2)"
+                passed: ${{ steps.check-2.outcome == 'success' }}
+            tips: ${{ contains(steps.*.outcome, 'failure') && '["(replace-me: next action that fixes the most likely mistake)", "(replace-me: next action for the second most likely mistake)"]' || '[]' }}
+
+      # END: Check practical exercise
+
+      - name: Fail job if not all checks passed
+        if: contains(steps.*.outcome, 'failure')
+        run: exit 1
+
+  post_next_step_content:
+    name: Post next step content
+    needs: [find_exercise, check_step_work] # grading must gate progress
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read # checkout step content
+      actions: write # disable this step and enable the next one
+      issues: write # post step content and progress comments
+    env:
+      ISSUE_REPOSITORY: ${{ github.repository }}
+      ISSUE_NUMBER: ${{ needs.find_exercise.outputs.issue-number }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Get response templates
+        uses: actions/checkout@v6
+        with:
+          repository: skills/exercise-toolkit
+          path: exercise-toolkit
+          ref: v0.9.3
+
+      - name: Create comment - step finished
+        uses: GrantBirki/comment@v2.1.1
+        with:
+          repository: ${{ env.ISSUE_REPOSITORY }}
+          issue-number: ${{ env.ISSUE_NUMBER }}
+          file: exercise-toolkit/markdown-templates/step-feedback/step-finished-prepare-next-step.md
+          vars: |
+            next_step_number: <NEXT_STEP>
+
+      - name: Create comment - add step content
+        uses: GrantBirki/comment@v2.1.1
+        with:
+          repository: ${{ env.ISSUE_REPOSITORY }}
+          issue-number: ${{ env.ISSUE_NUMBER }}
+          file: ${{ env.STEP_<NEXT_STEP>_FILE }}
+          vars: |
+            login: ${{ github.actor }}
+            full_repo_name: ${{ github.repository }}
+
+      - name: Create comment - watching for progress
+        uses: GrantBirki/comment@v2.1.1
+        with:
+          repository: ${{ env.ISSUE_REPOSITORY }}
+          issue-number: ${{ env.ISSUE_NUMBER }}
+          file: exercise-toolkit/markdown-templates/step-feedback/watching-for-progress.md
+
+      - name: Disable current workflow and enable next one
+        run: |
+          gh workflow disable "${{ github.workflow }}"
+          gh workflow enable "Step <NEXT_STEP>"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

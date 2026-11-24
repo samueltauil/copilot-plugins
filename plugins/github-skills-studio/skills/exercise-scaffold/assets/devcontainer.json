@@ -1,0 +1,18 @@
+{
+  // Keep the codespace minimal: only what this exercise needs.
+  "name": "(replace-me: exercise title)",
+  // Pick the smallest image that fits, e.g. mcr.microsoft.com/devcontainers/python:3.13
+  // or mcr.microsoft.com/devcontainers/javascript-node:22.
+  "image": "(replace-me: devcontainer image)",
+  "forwardPorts": [],
+  // Automate all setup so learners start on the lesson, not on installation.
+  "postCreateCommand": "(replace-me: dependency install command, or remove this line)",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "GitHub.copilot",
+        "GitHub.copilot-chat"
+      ]
+    }
+  }
+}
